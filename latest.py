@@ -1,4 +1,14 @@
 import numpy as np
+#assumed coordinates will be given as int in range -10 to 10
+#assumed the standard Manhatan calc function will be okay to be used
+
+#To support multiple events in the same location I would add more event objects in one cell of the grid
+
+#To support a much larger word size:
+#  I would use a bigger grid
+# May represent the events as an actual matrix or graph to speed up the search and use Breadth Fist Search to find events
+
+
 
 #Grid - GLOBAL
 grid = []
@@ -119,7 +129,7 @@ def getUserInput():
 #Print events function.
 def printResults(results):
     for event in results:
-        print("Event: "+str(event.id)+" - $"+str(event.price)+", Distance "+str(event.manhattanDistance))
+        print("Event "+str(event.id)+" - $"+str(event.price)+", Distance "+str(event.manhattanDistance))
 
 #Main
 #Generate matrix and seed.
